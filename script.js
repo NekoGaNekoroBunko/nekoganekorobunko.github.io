@@ -26,6 +26,8 @@ const goods = [
   { name: "お酒と猫のフレークシール", price: "500円", tag: "お酒と猫の", credit: "絵：よしん", image: "images/お酒と猫のフレークシール.jpg", url: "https://yoxinsyoten.booth.pm/items/8057465" },
   { name: "赤ワインと黒猫のしおり", price: "100円", tag: "お酒と猫の", credit: "絵：よしん", image: "images/赤ワインと黒猫のしおり.jpg", url: "https://yoxinsyoten.booth.pm/items/8057467" },
   { name: "ビールと猫のミニレターセット", price: "200円", tag: "お酒と猫の", credit: "絵：よしん", image: "images/ビールと猫のミニレターセット.jpg", url: "https://yoxinsyoten.booth.pm/items/8187599" },
+  { name: "梅酒を作ろう！セット", price: "100円", tag: "お酒と猫の", credit: "絵：よしん", image: "images/梅酒を作ろう！セット.jpg", url: "https://yoxinsyoten.booth.pm/items/8478315" },
+  { name: "写真集「上海の猫ちゃん」", price: "600円", tag: "上海の猫", credit: "写真：よしん", image: "images/写真集「上海の猫ちゃん」.jpg", url: "https://yoxinsyoten.booth.pm/items/8057468" },
   { name: "【栓抜き】年に2回くらいしか栓抜きを使わない人のための栓抜き缶マグネット", price: "400円", tag: "魔王", credit: "絵：よしん", image: "images/【栓抜き】年に2回くらいしか栓抜きを使わない人のための栓抜き缶マグネット.jpg", url: "https://yoxinsyoten.booth.pm/items/8187613" },
 ];
 // ==================== 商品カードを画面に作る処理 ====================
