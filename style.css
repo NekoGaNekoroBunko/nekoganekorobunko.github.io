@@ -1,0 +1,158 @@
+/* ============================================================
+   ねこが寝転文庫（Neko Ga NekoroBunko） style.css
+   ★ 色を変える → いちばん上の :root を編集
+   ★ 各パーツは見出しコメントで区切っています
+   ============================================================ */
+
+:root {
+  --paper: #ffffff;
+  --paper-light: #faf9f9;
+  --ink: #2f2a24;
+  --muted: #73695c;
+  --wood: #72533d;
+  --wood-dark: #4e382b;
+  --green: #66745d;
+  --red: #9a584b;
+  --line: #cfc2ae;
+  --shadow: 0 12px 28px rgba(58, 43, 31, .10);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(114,83,61,.035), transparent 28rem),
+    var(--paper);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+  line-height: 1.8;
+}
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ==================== ヘッダー ==================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(244,239,227,.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+}
+.header-inner {
+  width: min(1080px, calc(100% - 40px));
+  min-height: 76px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand { display: grid; grid-template-columns: auto auto; text-decoration: none; line-height: 1.15; }
+.brand-cat { grid-row: 1 / 3; font-size: 2rem; align-self: center; margin-right: 10px; transform: rotate(-8deg); }
+.brand-text { font-size: 1.15rem; font-weight: 700; letter-spacing: .12em; }
+.brand-sub { margin-top: 5px; color: var(--muted); font: 10px/1.2 Georgia, serif; letter-spacing: .16em; }
+.global-nav { display: flex; gap: 28px; font-size: .88rem; }
+.global-nav a { text-decoration: none; border-bottom: 1px solid transparent; }
+.global-nav a:hover { border-color: var(--wood); }
+.menu-button { display: none; border: 1px solid var(--wood); background: transparent; padding: 8px 12px; font: inherit; color: inherit; }
+
+
+/* ==================== トップ ==================== */
+.hero { padding: 86px 20px 55px; }
+.hero-inner { width: min(900px, 100%); margin: auto; text-align: center; }
+.hero-kicker { color: var(--red); letter-spacing: .22em; font-size: .82rem; margin: 0 0 8px; }
+.hero h1 { margin: 0; font-size: clamp(2.25rem, 7vw, 4.5rem); font-weight: 500; letter-spacing: .12em; }
+.hero-copy { max-width: 690px; margin: 24px auto 45px; color: var(--muted); font-size: .98rem; }
+
+/* ---------- トップ画像 ---------- */ 
+.hero-image {   width: 90%;   margin: 10px auto 0;   overflow: hidden; } 
+.hero-image img {   display: block;   width: 100%;   height: 500px;   object-fit: cover;   object-position: center center; }  
+
+/* ---------- 各セクション共通 ----------*/
+.section { width: min(1040px, calc(100% - 40px)); margin: 0 auto; padding: 90px 0; }
+.section + .section { border-top: 1px solid var(--line); }
+.section-heading { text-align: center; margin-bottom: 42px; }
+.section-label { margin: 0 0 4px; color: var(--red); font-size: .75rem; letter-spacing: .2em; }
+.section-heading h2 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.25rem); font-weight: 500; letter-spacing: .08em; }
+.section-heading > p:last-child:not(.section-label) { color: var(--muted); font-size: .8rem; margin: 6px 0 0; }
+
+/* ==================== ぽこ・よしん紹介 ==================== */
+.makers { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+.maker-card { background: var(--paper-light); border: 1px solid var(--line); box-shadow: var(--shadow); padding: 18px; display: grid; grid-template-columns: 42% 1fr; gap: 24px; position: relative; }
+.maker-card::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(114,83,61,.12); pointer-events: none; }
+.placeholder-image { background: #d7cbbb; min-height: 255px; display: grid; place-items: center; color: #6d6256; border: 1px solid #b9aa96; }
+.maker-body { padding: 12px 8px 8px 0; position: relative; z-index: 1; }
+.maker-role { margin: 0; color: var(--muted); font-size: 1rem; }
+.maker-body h3 { margin: 1px 0 12px; font-size: 2rem; font-weight: 500; }
+.maker-description { font-size: .85rem; }
+.maker-links { margin-top: 20px; display: grid; gap: 4px; font-family: sans-serif; font-size: .75rem; }
+.maker-links a { text-decoration-color: var(--line); text-underline-offset: 3px; }
+.maker-photo-frame { width: 100%; height: 255px; overflow: hidden;}
+.maker-photo {   width: 100%;   height: 100%;   object-fit: cover;   transform: scale(0.9);   mix-blend-mode: multiply; }  
+
+/* ==================== イベントカレンダー ==================== */
+.event-list { max-width: 800px; margin: auto; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+.event-row {   display: grid;   grid-template-columns: 110px 1.1fr 1.4fr 100px;   gap: 16px;   padding: 17px 8px;   border-bottom: 1px solid var(--line);   align-items: baseline;   font-size: .86rem; }  
+.event-row:last-child { border-bottom: 0; }
+.event-row time { font-family: Georgia, serif; font-size: .8rem; }
+.event-row strong { font-weight: 600; }
+.event-note { text-align: center; color: var(--muted); font-size: .72rem; margin-top: 18px; }
+.circle-link {   max-width: 800px;   margin: 8px auto 0;   text-align: right;   font-size: .8rem; }  
+
+/* ==================== 商品一覧 ==================== */
+.goods-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px 28px; }
+.goods-card { display: block; min-width: 0; }
+.goods-image { width: 100%; padding: 0; aspect-ratio: 1 / 1; background: #d7cbbb; border: 1px solid #b8aa96; overflow: hidden; position: relative; cursor: zoom-in; transition: transform .18s ease, box-shadow .18s ease; color: #6d6256; font: inherit; }
+.goods-image img { width: 100%; height: 100%; object-fit: cover; }
+.goods-image.is-placeholder { cursor: default; }
+.goods-image:hover:not(:disabled) { transform: translateY(-4px) rotate(-.3deg); box-shadow: var(--shadow); }
+.goods-info { display: block; padding: 10px 4px 0; text-decoration: none; }
+.goods-info:hover .goods-name { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+.goods-name { margin: 0; font-size: .95rem; }
+.goods-price { margin: 1px 0 0; color: var(--muted); font: .82rem/1.5 sans-serif; }
+.goods-tag { display: inline-block; margin-top: 7px; padding: 2px 8px; border: 1px solid var(--line); color: var(--muted); font-size: .66rem; }
+
+.image-modal { width: min(92vw, 900px); max-height: 90vh; padding: 0; border: 0; background: transparent; overflow: visible; }
+.image-modal::backdrop { background: rgba(28, 24, 20, .78); backdrop-filter: blur(2px); }
+.image-modal img { max-width: 100%; max-height: 86vh; margin: auto; object-fit: contain; box-shadow: 0 18px 60px rgba(0,0,0,.35); }
+.modal-close { position: absolute; right: -6px; top: -42px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: var(--paper-light); color: var(--ink); font-size: 1.45rem; line-height: 1; cursor: pointer; }
+
+/* ==================== フッター ==================== */
+.site-footer { margin-top: 10px; padding: 10px 20px 0px; text-align: center; border-top: 2px solid var(--wood-dark); color: var(--muted); font: .7rem/1.6 sans-serif; }
+.footer-cat { color: var(--ink); font-size: 1.15rem; margin-bottom: 8px; }
+
+@media (max-width: 760px) {
+  .header-inner { width: min(100% - 28px, 1080px); min-height: 66px; }
+  .brand-text { font-size: 1rem; }
+  .brand-sub { display: none; }
+  .menu-button { display: block; }
+  .global-nav { display: none; position: absolute; left: 0; right: 0; top: 66px; padding: 20px; background: var(--paper-light); border-bottom: 1px solid var(--line); flex-direction: column; align-items: center; gap: 14px; }
+  .global-nav.is-open { display: flex; }
+  .hero { padding-top: 65px; }
+  .hero h1 { letter-spacing: .06em; }
+  .hero-copy { text-align: left; }
+  .hero-shelf-fallback { transform: scale(.82); transform-origin: center bottom; margin-top: -10px; }
+  .section { width: min(100% - 28px, 1040px); padding: 66px 0; }
+
+  /* スマホでは ぽこ → よしん の順で縦並び */
+  .makers { grid-template-columns: 1fr; }
+  .maker-card { grid-template-columns: 38% 1fr; gap: 16px; padding: 14px; }
+  .placeholder-image { min-height: 210px; }
+  .maker-body h3 { font-size: 1.65rem; }
+
+  .event-row { grid-template-columns: 1fr 1.4fr; gap: 3px 12px; padding: 14px 0; }
+  .event-row span { color: var(--muted); font-size: .75rem; }
+
+  /* スマホでは商品を2列表示 */
+  .goods-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 14px; }
+  .goods-name { font-size: .86rem; }
+}
+
+@media (max-width: 430px) {
+  .maker-card { grid-template-columns: 1fr; }
+  .placeholder-image { min-height: 250px; }
+  .maker-body { padding: 2px 4px 8px; }
+  .hero-shelf-fallback { transform: scale(.68); margin-inline: -50px; }
+}
