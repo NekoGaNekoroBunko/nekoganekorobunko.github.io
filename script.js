@@ -8,6 +8,7 @@
 // ==================== ★商品データ：ここを編集★ ====================
 // 商品はここを書き換えるだけで増減できます。
 // image に画像ファイルのパス、url に販売ページのURLを入れてください。
+// { name: "", price: "400円", tag: "魔王", credit: "絵：よしん", image: "images/.jpg", url: "" },
 const goods = [
   { name: "徳利とおちょこ", price: "徳利1200円/おちょこ600円/セット2200円", tag: "酒器", credit: "絵：ぽこ", image: "images/徳利とおちょこ.jpg", url: "#" },
   { name: "酒はほどほどに Tシャツ", price: "2500円", tag: "酒ほど猫", credit: "絵：ぽこ", image: "images/酒はほどほどにTシャツ.jpg", url: "https://yoxinsyoten.booth.pm/items/8057518" },
