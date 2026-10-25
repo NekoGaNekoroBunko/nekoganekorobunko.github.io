@@ -16,7 +16,7 @@ const goods = [
   { name: "買える「顰蹙」シリーズ", price: "1000円", tag: "文字グッズ", credit: "字：ぽこ", image: "images/買える「顰蹙」シリーズ.jpg", url: "https://yoxinsyoten.booth.pm/items/8489512" },
   { name: "借りられる「猫」", price: "1000円", tag: "文字グッズ", credit: "字：ぽこ", image: "images/借りられる「猫」.jpg", url: "https://yoxinsyoten.booth.pm/items/8489612" },
   { name: "喜怒哀楽ねこちゃんステッカー<br>5種詰め合わせ", price: "500円", tag: "喜怒哀楽ねこちゃん", credit: "絵：ぽこ", image: "images/喜怒哀楽ねこちゃんステッカー5種詰め合わせ.jpg", url: "https://poco0508.booth.pm/items/8560275" },
-  { name: "猫は絶好調", price: "500円", tag: "月餅", credit: "写真：ぽこ", image: "images/ねこは絶好調.jpg", url: "#" },
+  { name: "猫は絶好調", price: "500円", tag: "月餅", credit: "写真：ぽこ", image: "images/ねこは絶好調.jpg", url: "https://poco0508.booth.pm/items/8560175" },
   { name: "ポストカード4種セット", price: "400円", tag: "ダジャレ", credit: "写真：ぽこ", image: "images/ポストカード4種セット.png", url: "https://poco0508.booth.pm/items/8057329" },
   { name: "アクリルキーホルダー(カステラ)", price: "300円", tag: "カステラ", credit: "絵：ぽこ", image: "images/アクリルキーホルダー(カステラ).png", url: "https://poco0508.booth.pm/items/8057421" },
   { name: "アクリルキーホルダー(月餅)", price: "300円 在庫なし", tag: "月餅", credit: "絵：ぽこ", image: "images/アクリルキーホルダー(月餅).png", url: "https://poco0508.booth.pm/items/8057381" },
